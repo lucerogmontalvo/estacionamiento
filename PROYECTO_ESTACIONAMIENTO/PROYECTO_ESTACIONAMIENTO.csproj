@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{15275442-410F-4CFF-B389-205EAEFD88A2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PROYECTO_ESTACIONAMIENTO</RootNamespace>
+    <AssemblyName>PROYECTO_ESTACIONAMIENTO</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\..\Documents\Dll\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GUI\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Menu_Caja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Menu_Caja.Designer.cs">
+      <DependentUpon>Menu_Caja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Menu_Clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Menu_Clientes.Designer.cs">
+      <DependentUpon>Menu_Clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Menu_Opciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Menu_Opciones.Designer.cs">
+      <DependentUpon>Menu_Opciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Menu_Ticket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Menu_Ticket.Designer.cs">
+      <DependentUpon>Menu_Ticket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Menu_Caja.resx">
+      <DependentUpon>Menu_Caja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Menu_Clientes.resx">
+      <DependentUpon>Menu_Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Menu_Opciones.resx">
+      <DependentUpon>Menu_Opciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Menu_Ticket.resx">
+      <DependentUpon>Menu_Ticket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BO\" />
+    <Folder Include="DAO\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_Services-256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\002_money_cash_gold_wealth_income_deposit_finance-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\004-Minus-256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6-256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\011_226_business_process_employee_worker-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\016-256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\012_card_money_pay_payment_finance_shopping_check-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ESTACIONAMIENTO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\001_173_car_transport_parking_machine_meter-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\016-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\38_Target_Audience-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tools-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cash_register-commerce-buy-purchase-payment-shopping_store-commerce_and_shopping-256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ticket-256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cash_register-commerce-buy-purchase-payment-shopping_store-commerce_and_shopping-2561.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
